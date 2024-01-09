@@ -334,14 +334,14 @@ public partial class Dropzone<TItem>
 
     private void OnDrop()
     {
-        DragDropService.ShouldRender = true;
+        DragDropService.ShouldRender = true;        
         if (!IsDropAllowed())
         {
             DragDropService.Reset();
             return;
         }
 
-        var activeItem = DragDropService.ActiveItem;
+        var activeItem = DragDropService.ActiveItem;        
         if (DragDropService.DragTargetItem == null) //no direct drag target
         {
             if (!Items.Contains(activeItem)) //if dragged to another dropzone
